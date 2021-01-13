@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Щоденник</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-8 m-auto border border-gark bg-info text-white">
+          <h2 class="text-center">Щоденник</h2>
+          <div class="row justify-content-around">
+            <button class="col-md-5 btn btn-warning clear_selected w-50" onclick="save()">Зберегти</button>
+            <button class="col-md-5 btn btn-warning clear_selected w-50" onclick="load()">Завантажити</button>
+          </div>
+        </div>
+        <div class="col-md-8 m-auto border border-gark bg-light" id="weekDay">
+            <h3>Понеділок</h3>
+            <ul class="task_day">
+            </ul>
+            <button class="btn btn-primary add_task w-100">Додати</button>
+        </div>
+        
+        <div class="col-md-8 m-auto border border-gark bg-light">
+            <h3>Вівторок</h3>
+            <ul class="task_day">
+            </ul>
+            <button class="btn btn-primary add_task w-100">Додати</button>
+        </div>
+
+        <div class="col-md-8 m-auto border border-gark bg-light">
+          <h3>Середа</h3>
+          <ul class="task_day">
+          </ul>
+          <button class="btn btn-primary add_task w-100">Додати</button>
+        </div>
+
+        <div class="col-md-8 m-auto border border-gark bg-light">
+          <h3>Четвер</h3>
+          <ul class="task_day">
+          </ul>
+          <button class="btn btn-primary add_task w-100">Додати</button>
+        </div>
+
+        <div class="col-md-8 m-auto border border-gark bg-light">
+          <h3>П'ятниця</h3>
+          <ul class="task_day">
+          </ul>
+          <button class="btn btn-primary add_task w-100">Додати</button>
+        </div>
+
+        <div class="col-md-8 m-auto border border-gark bg-light">
+          <h3>Субота</h3>
+          <ul class="task_day">
+          </ul>
+          <button class="btn btn-primary add_task w-100">Додати</button>
+        </div>
+
+        <div class="col-md-8 m-auto border border-gark bg-light">
+          <h3>Неділя</h3>
+          <ul class="task_day">
+          </ul>
+          <button class="btn btn-primary add_task w-100">Додати</button>
+        </div>
+
+        <div class="col-md-8 m-auto border border-gark">
+          <button class="btn btn-warning clear_selected w-100" onclick="deleteSelected()">Видалити виконані завдання</button>
+        </div> 
+    </div>
+    
+    <!-- Moal Window -->
+    <div class="modal" tabindex="-1" id="my_modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="title_modal">Enter description</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <input type="text" id="task" class="w-100">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="save">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
